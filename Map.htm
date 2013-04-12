@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
+		<link rel="stylesheet" href="plugin_carte/style/reset.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="plugin_carte/style/style.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="plugin_carte/style/jquery-ui.css"  type="text/css">
+    <link rel="stylesheet" href="plugin_menu_droit/style/L.Control.Locate.css" /> 
+    <link rel="stylesheet" href="plugin_menu_droit/style/bootstrap.css" /> 
+		
+		<script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+		<script src="plugin_menu_gauche/script/jquery.js"></script>
+		<script src="plugin_menu_gauche/script/jquery-ui.js"></script>
+
+<!-- A inclure à la toute fin -->
+		<link rel="stylesheet" type="text/css" href="plugin_carte/style/style.css">
+		<link rel="stylesheet" type="text/css" href="plugin_menu_gauche/style/style.css">
+		<link rel="stylesheet" type="text/css" href="contenu_menu.css">
+
+	</head>
+	<body onload="onLoad()" onmouseup="map.dragging.enable();">
+		<div id="container">	
+			<div id="centerColumn">
+				<div id="map">
+					<div id="basemapslidercontainer">
+						<div id="basemapslidertext">
+							<p>
+								-- Projet OGIS v1.0 --
+							</p>
+						</div>
+						<div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="basemapslider" onmousedown="map.dragging.disable();">
+							<a class="ui-slider-handle ui-state-default ui-corner-all" href="#"></a>
+						</div>
+					</div>
+
+					<div id="zoomslidercontainer">
+						<div class="ui-slider ui-slider-vertical ui-widget ui-widget-content ui-corner-all" id="zoomslider" onmousedown="map.dragging.disable();">
+							<a class="ui-slider-handle ui-state-default ui-corner-all" href="#"></a>
+						</div>
+					</div>
+
+					<div class="layers" style="font-size: 10px;">
+						<button aria-disabled="false" role="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" id="layersopener">
+							
+						</button>
+					</div>
+					
+
+				</div>
+				<div id="btn-options" class="btn-container">
+					<div id="measuring-tool" class="btn btn-primary btn-large btn-margins">
+						Mesure de distance
+					</div>
+					<div id="zoom" class="btn btn-primary btn-large btn-margins">Zoomer dans un cadre</div>
+					</div>
+				</div>
+
+				<script src="plugin_menu_droit/script/L.Control.Locate.js" ></script>
+				<script src="plugin_menu_droit/script/L.MeasuringTool.js"></script>
+				<script src="plugin_menu_droit/script/L.Zoom.Control.js"></script>
+				<script src="plugin_carte/script/L.Control.MiniMap.js"></script>
+				<script src="plugin_carte/script/Map.js"></script>
+				<script src="plugin_menu_droit/script/measuring.js"></script>
+				<script src="plugin_menu_droit/script/zoombox.js"></script>
+			</div>
+
+		<div id="dialog">
+		
+
+			
+			<div id="contenu_gauche">				
+				<div  id="close_button">
+				</div>
+				
+		
+
+				
+				<div id="layersdialog">
+				<form name="checkform">
+						<div id="accordion">
+							<div id="accordion_head1">
+							
+							</div>
+							<div class="contenu">
+								<div>
+																		<div id="layersdialog">
+																					<form name="checkform">
+																							<div id="sous_accordion1">
+																								<h3><a href="#">carte1</a></h3>
+																								<div class="contenu">
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+
+																								</div>
+																			
+																								<h3><a href="#">carte2</a></h3>
+																								<div class="contenu">
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+																								</div>
+																							
+																								<h3><a href="#">carte3</a></h3>
+																								<div class="contenu">
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+																								</div>
+																								
+																								<h3><a href="#">carte4</a></h3>
+																								<div class="contenu">
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+																								</div>
+																								
+																								
+																							</div>
+																							
+																						</form>
+																						
+																					</div>
+								</div>
+								
+
+							</div>
+		
+							<div id="accordion_head2">
+							
+							</div>
+							<div class="contenu">
+								<div>
+																					<div id="layersdialog">
+																					<form name="checkform">
+																							<div id="sous_accordion2">
+																								<h3><a href="#">carte1</a></h3>
+																								<div class="contenu">
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+
+																								</div>
+																			
+																								<h3><a href="#">carte2</a></h3>
+																								<div class="contenu">
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+																								</div>
+																							
+																								
+																							</div>
+																							
+																						</form>
+																						
+																					</div>
+								</div>
+								
+
+							</div>
+							
+							
+							<div id="accordion_head3">
+							
+							</div>
+							<div class="contenu">
+								<div>
+																					<div id="layersdialog">
+																					<form name="checkform">
+																							<div id="sous_accordion3">
+																								<h3><a href="#">carte1</a></h3>
+																								<div class="contenu">
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+
+																								</div>
+																			
+																								<h3><a href="#">carte2</a></h3>
+																								<div class="contenu">
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+																								</div>
+																							
+																								
+																							</div>
+																							
+																						</form>
+																						
+																					</div>
+								</div>
+								
+
+							</div>
+							
+							<div id="accordion_head4">
+							
+							</div>
+							<div class="contenu">
+								<div>
+																					<div id="layersdialog">
+																					<form name="checkform">
+																							<div id="sous_accordion4">
+																								<h3><a href="#">carte1</a></h3>
+																								<div class="contenu">
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+
+																								</div>
+																			
+																								<h3><a href="#">carte2</a></h3>
+																								<div class="contenu">
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+																								</div>
+																							
+																								
+																							</div>
+																							
+																						</form>
+																						
+																					</div>
+								</div>
+								
+
+							</div>
+							
+							<div id="accordion_head5">
+							
+							</div>
+							<div class="contenu">
+								<div>
+																					<div id="layersdialog">
+																					<form name="checkform">
+																							<div id="sous_accordion5">
+																								<h3><a href="#">carte1</a></h3>
+																								<div class="contenu">
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+
+																								</div>
+																			
+																								<h3><a href="#">carte2</a></h3>
+																								<div class="contenu">
+																									<div>
+																										<p>info</p>
+																									</div>
+																									<div>
+																										<p>info</p>
+																									</div>
+																								</div>
+																							
+																								
+																							</div>
+																							
+																						</form>
+																						
+																					</div>
+								</div>
+								
+
+							</div>
+						
+							
+						</div>
+						
+					</form>
+					
+				</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

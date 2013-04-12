@@ -1,0 +1,79 @@
+.layers{
+	height:inherit;
+}
+
+#layersopener {
+	margin:0px;
+	 background-image: url(open.png);
+ background-repeat: no-repeat;
+ background-position: center;
+	height:inherit;
+	width:25px;
+	z-index: 1000;
+	background-color:white;
+	border-radius: 0px;
+	border:0px;
+border-top-right-radius:4px;
+border-bottom-right-radius:4px;
+}
+
+#dialog
+{
+display: none;
+z-index: 1000;
+outline: 0px none;
+position: absolute;
+padding:0px;
+border-radius: 0px;
+border:0px;
+
+}
+
+#layersdialog
+{
+position:relative;
+font-size: 10px;
+text-align: left;
+}
+
+#close_button{
+background: white;
+ background-image: url(close.png);
+ background-repeat: no-repeat;
+ background-position: center;
+/*box-shadow: 3px 0px 9px #000;*/ 
+border-right:0px;
+border-left:0px;
+border-bottom:0px;
+border-top:0px;
+height: 100%;
+width : 20px;
+margin:0px;
+position: absolute;
+top:0;
+right:0;
+border-radius: 0px;
+}
+
+
+#contenu_gauche{
+margin:0px;
+}
+
+#head_dialog{
+width:50px;
+background-color:blue;
+}
+
+.ui-dialog-title
+{ display:none;}
+.ui-dialog .ui-dialog-titlebar
+{ display:none;}
+#accordion{
+	position:relative;
+	width:160px;
+}
+
+.contenu{
+border:1px solid black;
+}

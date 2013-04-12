@@ -1,0 +1,154 @@
+html
+{
+height:100%;
+margin:0px;
+padding:0px;
+}
+
+body
+{
+width:inherit;
+height:inherit;
+margin:0px;
+padding:0px;
+}
+
+#container
+{
+
+width:inherit;
+height:inherit;
+margin:0px;
+padding:0px;
+}
+
+#centerColumn
+{
+width:inherit;
+height:inherit;
+margin:0px;
+padding:0px;
+}
+
+#map
+{
+width:inherit;
+height:inherit;
+margin:0px;
+padding:0px;
+}
+
+
+#zoomslider a
+{
+bottom: 60%;
+}
+
+#basemapslidercontainer {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 1000;
+}
+#zoomslidercontainer {
+	position: absolute;
+	top: 50px;
+	right: 10px;
+	z-index: 1000;
+}
+#basemapslidertext
+{
+font-size: 12px;
+font-weight: bold;
+background: white;
+opacity:0.6;
+}
+
+#basemapslidertext
+{
+left: 100%;
+}
+
+#basemapslider
+{
+font-size:62.5%;
+margin: 10px;
+width: 125px;
+}
+
+#zoomslider
+{
+font-size:62.5%;
+margin: 10px;
+height: 125px
+}
+
+/*jquery ui modifié*/
+.ui-widget-content { border: 0px solid #aaaaaa/*{borderColorContent}*/;}
+.ui-accordion .ui-accordion-content { padding: 1em 2.2em; border-top: 0; margin-top: -2px; position: relative; top: 1px; margin-bottom: 2px; overflow: auto; display: none; zoom: 1;
+border-left: 1px solid #aaaaaa;
+border-right: 1px solid #aaaaaa;
+border-bottom: 1px solid #aaaaaa; }
+
+
+
+
+/**** CSS from test.html de seb ****/
+
+.measuring-line-class {	
+		stroke-dasharray:10, 10;
+		stroke:black;
+	}
+
+	.measuring-line-not-doted {
+		stroke:green;
+	}
+	
+	.measuring-line-for-look {
+		stroke-dasharray:2, 20;
+	}
+
+	.measuring-label-tooltip .leaflet-popup-content-wrapper {
+		border-radius: 4px 4px 4px 4px;
+		opacity: 0.7;
+		padding: 1px;
+		text-align: center;
+	}
+	.measuring-label-tooltip .leaflet-popup-content {
+		margin: 0 5px;
+		/*width: 0;*/
+	}
+	.measuring-label-tooltip .leaflet-popup-tip-container {
+		display: none;
+	}
+.btn-container {
+		top:10px;
+		right:20px;
+		position:absolute;
+		z-index:5;
+	}
+	
+	/* Essai à l'arrache pour cadre dynamique en css*/
+	.Cadre
+	{
+	position:relative;
+	z-index:3;
+	top : 20px;
+	left:250px;
+	width:300px;
+	height:150px;
+	background-color:yellow;
+	}
+
+
+
+/***** Mini Map ******/
+
+.leaflet-control-minimap {
+    background: none repeat scroll 0 0 #F8F8F9;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: 0 1px 7px #999999;
+    height: 150px;
+    width: 150px;
+}
