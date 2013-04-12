@@ -34,9 +34,19 @@ function onLoad() {
     map = new L.Map('map', {
         center: new L.LatLng(42.805224943488675, -73.86795043945312),
         zoom: 12,
+		fullscreenControl: true, // add fullscreen control to the map
         layers: [nysdop, mapquest],
 				zoomControl : false
+
     });
+	// detect fullscreen toggling
+		map.on('enterFullscreen', function(){
+			if(window.console) window.console.log('enterFullscreen');
+		});
+		map.on('exitFullscreen', function(){
+			if(window.console) window.console.log('exitFullscreen');
+		});
+		
     map.on('zoomend', function (e) {
         $("#zoomslider").slider("value", map.getZoom());
     });
