@@ -95,6 +95,66 @@ $(document).ready(function () {
     });
     $.fx.speeds._default = 1000;
     
+	/*creation of 2 var that countains the size fo the window*/
+				
+				var viewportwidth;
+				var viewportheight;
+				if (typeof window.innerWidth != 'undefined')
+			 {
+				  viewportwidth = window.innerWidth,
+				  viewportheight = window.innerHeight
+			 }
+			  
+			// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+			 
+			 else if (typeof document.documentElement != 'undefined'
+				 && typeof document.documentElement.clientWidth !=
+				 'undefined' && document.documentElement.clientWidth != 0)
+			 {
+				   viewportwidth = document.documentElement.clientWidth,
+				   viewportheight = document.documentElement.clientHeight
+			 }
+			  
+			 // older versions of IE
+			  
+			 else
+			 {
+				   viewportwidth = document.getElementsByTagName('body')[0].clientWidth,
+				   viewportheight = document.getElementsByTagName('body')[0].clientHeight
+			 }
+			  
+	/*function that changes the size of the menu if the window is resized*/	
+	var timer;
+		window.onresize = function(){
+		clearInterval( timer );
+		timer = setTimeout( function(){
+        			 if (typeof window.innerWidth != 'undefined')
+			 {
+				  viewportwidth = window.innerWidth,
+				  viewportheight = window.innerHeight
+			 }
+			  
+			// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+			 
+			 else if (typeof document.documentElement != 'undefined'
+				 && typeof document.documentElement.clientWidth !=
+				 'undefined' && document.documentElement.clientWidth != 0)
+			 {
+				   viewportwidth = document.documentElement.clientWidth,
+				   viewportheight = document.documentElement.clientHeight
+			 }
+			  
+			 // older versions of IE
+			  
+			 else
+			 {
+				   viewportwidth = document.getElementsByTagName('body')[0].clientWidth,
+				   viewportheight = document.getElementsByTagName('body')[0].clientHeight
+			 }
+			 $("#layersdialog").dialog({height: viewportheight})
+
+    }, 400 );
+	}
 	
 	$(function () {
         $("#layersdialog").dialog({
@@ -103,7 +163,7 @@ $(document).ready(function () {
 			draggable: false ,
             position: [0, 0],
             width: 200,
-			height: $("#map").height(),
+			height: viewportheight,
 			show: {effect: 'slide', speed: 1000, direction: "left"},
             hide: {effect: 'slide', speed: 1000, direction: "left"},
 			resizable: false,
